@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - NVD CVE Dashboard</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🛡️ About NVD CVE Dashboard</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <a href="/cves/list" class="back-button">← Back to Dashboard</a>
+    
+    <div class="detail-card">
+      <div class="detail-header">
+        <h2>National Vulnerability Database (NVD) CVE Dashboard</h2>
+      </div>
+
+      <div class="detail-section">
+        <h3>Overview</h3>
+        <p>
+          A comprehensive full-stack application for fetching, storing, and displaying CVE (Common Vulnerabilities and Exposures) 
+          data from the National Vulnerability Database. This dashboard provides security professionals and developers with 
+          real-time access to vulnerability information with powerful filtering and search capabilities.
+        </p>
+      </div>
+
+      <div class="detail-section">
+        <h3>Key Features</h3>
+        <div class="detail-grid">
+          <div class="detail-item">
+            <strong>🔄 Automated Data Sync</strong>
+            <span>Daily incremental updates from NVD API</span>
+          </div>
+          <div class="detail-item">
+            <strong>🔍 Advanced Filtering</strong>
+            <span>Search by ID, year, score, date, keywords</span>
+          </div>
+          <div class="detail-item">
+            <strong>📊 CVSS Scoring</strong>
+            <span>Support for both v2 and v3 metrics</span>
+          </div>
+          <div class="detail-item">
+            <strong>⚡ Fast Performance</strong>
+            <span>Server-side pagination & sorting</span>
+          </div>
+          <div class="detail-item">
+            <strong>🎨 Modern UI</strong>
+            <span>Clean, responsive interface</span>
+          </div>
+          <div class="detail-item">
+            <strong>🔒 Secure</strong>
+            <span>Input validation & safe queries</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-section">
+        <h3>Technology Stack</h3>
+        <p><strong>Backend:</strong> Node.js, Express, MongoDB, Mongoose, Axios, Zod, node-cron</p>
+        <p><strong>Frontend:</strong> Vanilla JavaScript, HTML5, CSS3</p>
+        <p><strong>Data Source:</strong> NVD REST API v2.0</p>
+      </div>
+
+      <div class="detail-section">
+        <h3>Available Filters</h3>
+        <ul style="color: #8b949e; line-height: 2; list-style-position: inside;">
+          <li><strong>CVE ID:</strong> Search by specific CVE identifier</li>
+          <li><strong>Year:</strong> Filter by publication year (YYYY)</li>
+          <li><strong>Score Min:</strong> Minimum CVSS base score (0-10)</li>
+          <li><strong>Score Version:</strong> CVSS v2 or v3</li>
+          <li><strong>Modified Last Days:</strong> Recently updated CVEs</li>
+          <li><strong>Keyword:</strong> Search in vulnerability descriptions</li>
+        </ul>
+      </div>
+
+      <div class="detail-section">
+        <h3>Data Processing</h3>
+        <p>
+          The system automatically fetches CVE data from the NVD API, normalizes the information, 
+          removes duplicates, and stores it in MongoDB. A scheduled job runs daily at 00:30 to 
+          fetch incremental updates, ensuring the database stays current with the latest vulnerability information.
+        </p>
+      </div>
+
+      <div class="detail-section">
+        <h3>API Endpoints</h3>
+        <p><strong>GET /api/cves</strong> - List CVEs with filtering and pagination</p>
+        <p><strong>GET /api/cves/:id</strong> - Get detailed information for a specific CVE</p>
+        <p><strong>GET /api/health</strong> - Check API health status</p>
+      </div>
+
+      <div class="detail-section" style="margin-top: 40px; padding-top: 30px; border-top: 1px solid #30363d;">
+        <p style="text-align: center; color: #8b949e;">
+          Built with ❤️ for security professionals and developers
+        </p>
+        <p style="text-align: center; color: #58a6ff; margin-top: 15px; font-weight: 600;">
+          Developed by Harish Nachiappan R
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
